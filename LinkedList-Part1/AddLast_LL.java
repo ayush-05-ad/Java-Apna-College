@@ -1,4 +1,3 @@
-import java.util.LinkedList;
 
 public class AddLast_LL {
     class Node {
@@ -10,8 +9,8 @@ public class AddLast_LL {
             this.next = null;
         }
 
-        public static Node head;
-        public static Node tail;
+        Node head;
+        Node tail;
 
         public void addFirst (int data) {
             Node newNode = new Node(data);
