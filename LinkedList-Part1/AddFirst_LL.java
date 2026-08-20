@@ -10,8 +10,8 @@ public class AddFirst_LL {
             this.next = null;
         }
 
-        public static Node head;
-        public static Node tail;
+        Node head;
+        Node tail;
 
         public void addFirst(int data) {
 
