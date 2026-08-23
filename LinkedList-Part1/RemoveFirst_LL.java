@@ -90,6 +90,7 @@ public class RemoveFirst_LL {
         }
         System.out.println("null");
     }
+    
 
     public static void main(String[] args) {
         RemoveFirst_LL ll = new RemoveFirst_LL();
