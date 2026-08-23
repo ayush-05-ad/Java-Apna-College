@@ -1,4 +1,3 @@
-
 public class AddLast_LL {
     class Node {
         int data;
@@ -8,40 +7,40 @@ public class AddLast_LL {
             this.data = data;
             this.next = null;
         }
+    }
 
-        Node head;
-        Node tail;
+    Node head;
+    Node tail;
 
-        public void addFirst (int data) {
-            Node newNode = new Node(data);
+    public void addFirst (int data) {
+        Node newNode = new Node(data);
 
-            if(head == null){
-                head = tail = newNode;
-                return;
-            }
-
-            newNode.next = head;
-
-            head = newNode;
-
+        if(head == null){
+            head = tail = newNode;
+            return;
         }
 
-        public void addLast(int data) {
-            Node newNode = new Node(data);
+        newNode.next = head;
 
-            if(head == null){
-                head = tail = newNode;
-                return;
-            }
+        head = newNode;
 
-            tail.next = newNode;
+    }
 
-            tail = newNode;
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+
+        if(head == null){
+            head = tail = newNode;
+            return;
         }
-    } 
+
+        tail.next = newNode;
+
+        tail = newNode;
+    }
 
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        AddLast_LL ll = new AddLast_LL();
 
         ll.addFirst(2);
         ll.addFirst(1);
