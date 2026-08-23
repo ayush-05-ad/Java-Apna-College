@@ -62,36 +62,42 @@ public class RemoveLast_LL {
         size++;
     }
 
-    public void removeFirst() {
+    public int removeFirst() {
         if(head == null){
             System.out.println("Linked List is empty");
-            return;
+            return Integer.MIN_VALUE;
         }
 
+        int val = head.data;
         head = head.next;
         size--;
+        return val;
     }
 
-    public void removeLast() {
+    public int removeLast() {
         if(head == null){
             System.out.println("Linked List is empty");
-            return;
+            return Integer.MIN_VALUE;
         }
 
         if(size == 1){
+            int val = head.data;
             head = tail = null;
             size--;
-            return;
+            return val;
         }
 
-        Node temp = head;
+        //prev : i = size - 2
+        Node prev = head;
         for(int i = 0; i < size - 2; i++){
-            temp = temp.next;
+            prev = prev.next;
         }
 
-        temp.next = null;
-        tail = temp;
+        int val = prev.next.data;
+        prev.next = null;
+        tail = prev;
         size--;
+        return val;
     }
 
     public void print() {
@@ -119,9 +125,9 @@ public class RemoveLast_LL {
         ll.addLast(5);
         ll.addMiddle(2, 3);
         ll.print();
-        ll.removeFirst();
+        System.out.println("Removed element: " + ll.removeFirst());
         ll.print();
-        ll.removeLast();
+        System.out.println("Removed element: " + ll.removeLast());
         ll.print();
 
         System.out.println("Size of Linked List: " + size);
