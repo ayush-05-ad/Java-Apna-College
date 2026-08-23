@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class AddFirst_LL {
     class Node {
         int data;
@@ -10,31 +8,32 @@ public class AddFirst_LL {
             this.next = null;
         }
 
-        Node head;
-        Node tail;
+    }
 
-        public void addFirst(int data) {
+    Node head;
+    Node tail;
 
-            // step 1 -> Create new Node
-            Node newNode = new Node(data);
+    public void addFirst(int data) {
 
-            // this step only for null case
-            if (head == null) {
-                head = tail = newNode;
-                return;
-            }
+        // step 1 -> Create new Node
+        Node newNode = new Node(data);
 
-            // step2 -> newNode next = head
-            newNode.next = head; // Link
-
-            // step3 -> head = newNode
-            head = newNode;
-
+        // this step only for null case
+        if (head == null) {
+            head = tail = newNode;
+            return;
         }
+
+        // step2 -> newNode next = head
+        newNode.next = head; // Link
+
+        // step3 -> head = newNode
+        head = newNode;
+
     }
 
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        AddFirst_LL ll = new AddFirst_LL();
 
         ll.addFirst(2);
         ll.addFirst(1);
