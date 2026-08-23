@@ -62,15 +62,6 @@ public class IterativeSearch_LL {
         size++;
     }
 
-    public void removeFirst() {
-        if(head == null){
-            System.out.println("Linked List is empty");
-            return;
-        }
-
-        head = head.next;
-        size--;
-    }
 
     public void print() {
 
@@ -116,13 +107,11 @@ public class IterativeSearch_LL {
         ll.addMiddle(2, 3);
         ll.print();// 1 -> 2 -> 3 -> 4 -> 5 -> null
 
+        System.out.println("Size of Linked List: " + size);
+
         System.out.println(ll.itrSearch(4));// 3    
         System.out.println(ll.itrSearch(10));// -1
 
-        ll.removeFirst();
-        ll.print();
-
-        System.out.println("Size of Linked List: " + size);
     }
 
 }
